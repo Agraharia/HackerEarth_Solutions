@@ -1,0 +1,24 @@
+'''
+# Sample code to perform I/O:
+
+name = input()                  # Reading input from STDIN
+print('Hi, %s.' % name)         # Writing output to STDOUT
+
+# Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
+'''
+
+# Write your code here
+n=int(input())
+a=input().split()
+v=int(n/2)
+fs=0
+for i in range(v):
+    fs *= 10
+    fs += int(a[i][0])
+for i in range(v,n):
+    fs *= 10
+    fs += int(a[i][-1])
+if fs %11 == 0 and n%2==0:
+    print("OUI")
+else:
+    print("NON")
